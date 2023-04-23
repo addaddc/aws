@@ -30,3 +30,6 @@ chmod -R 755 /opt/tomcat
 cd /opt/tomcat/conf
 update server.xml and set the generated certificate folder path
 
+sudo /sbin/iptables -t nat -I PREROUTING -p tcp --dport 443 -j REDIRECT --to-port 8443
+
+
