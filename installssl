@@ -2,3 +2,31 @@
 After install the tomcat, it will be 8080.
 Using the following to access tomcat by port 80
 sudo /sbin/iptables -t nat -I PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 8080
+sudo /sbin/iptables -t nat -I PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 80
+
+
+which amazon-linux-extras
+
+if not installed,
+sudo yum install -y amazon-linux-extras
+
+install EPEL:
+sudo amazon-linux-extras install epel
+instal：certbot
+sudo yum install certbot
+
+
+sudo /sbin/iptables -t nat -I PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 80
+sudo /sbin/iptables -t nat -I PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 8080
+
+
+
+install certification:
+
+sudo certbot certonly --standalone -d yourdomainname.com
+
+
+chmod -R 755 /opt/tomcat
+cd /opt/tomcat/conf
+update server.xml and set the generated certificate folder path
+
