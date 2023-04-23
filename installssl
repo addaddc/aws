@@ -1,0 +1,5 @@
+1.
+Download the EPEL repository RPM package for your system architecture using the following command:
+
+sudo dnf install wget
+wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
