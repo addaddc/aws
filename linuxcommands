@@ -2,3 +2,10 @@
 yum repolist
 2.
 sudo yum list
+
+3. show amazon linux kernel
+rpm -E %{rhel}
+For Amazon Linux 2, this will give you 7.
+
+
+cat /etc/os-release
