@@ -19,6 +19,8 @@ sudo yum install certbot
 sudo /sbin/iptables -t nat -I PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 80
 sudo /sbin/iptables -t nat -I PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 8080
 
+sudo /sbin/iptables -t nat -I PREROUTING -p tcp --dport 443 -j REDIRECT --to-port 8443
+
 
 
 install certification:
@@ -32,7 +34,7 @@ update server.xml and set the generated certificate folder path
 
  <Connector port="80" protocol="HTTP/1.1"
                connectionTimeout="20000"
-               redirectPort="8443"
+               redirectPort="443"
                maxParameterCount="1000"
                />
     <!-- A "Connector" using the shared thread pool-->
@@ -45,7 +47,7 @@ update server.xml and set the generated certificate folder path
                />
     -->
 	
-	<Connector port="8443" protocol="org.apache.coyote.http11.Http11NioProtocol"
+<Connector port="8443" protocol="org.apache.coyote.http11.Http11NioProtocol"
                maxThreads="150" SSLEnabled="true">
         <SSLHostConfig>
           <Certificate certificateFile="/etc/letsencrypt/live/domainname.com/cert.pem"
