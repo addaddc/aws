@@ -1,0 +1,4 @@
+1.Refresh repo by typing the following command:
+yum repolist
+2.
+sudo yum list
