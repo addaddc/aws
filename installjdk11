@@ -9,6 +9,10 @@ sudo yum install java-11-amazon-corretto-headless
 Show installed java's version
 java -version
 
+5.If need uninstall
+sudo yum remove java-11-amazon-corretto-headless
+
+
 Reference:
 1. Amazon Linux 2023 Documentation
 https://docs.aws.amazon.com/linux/index.html
