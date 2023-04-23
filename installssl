@@ -60,4 +60,9 @@ update server.xml and set the generated certificate folder path
 
 sudo /sbin/iptables -t nat -I PREROUTING -p tcp --dport 443 -j REDIRECT --to-port 8443
 
+delete first rule:
+
+
+sudo iptables -t nat -D PREROUTING 1
+
 
