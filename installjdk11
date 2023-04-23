@@ -3,3 +3,12 @@ sudo yum update
 2. show linux version
 cat /etc/system-release
 3.
+Install the headless Amazon Corretto 11:
+sudo yum install java-11-amazon-corretto-headless
+4.
+Show installed java's version
+java -version
+
+Reference:
+1. Amazon Linux 2023 Documentation
+https://docs.aws.amazon.com/linux/index.html
