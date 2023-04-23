@@ -1,0 +1,5 @@
+1.
+sudo yum update
+2. show linux version
+cat /etc/system-release
+3.
