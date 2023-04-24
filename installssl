@@ -58,6 +58,17 @@ sudo iptables -t nat -D PREROUTING 1
 Save the prerouting rule, without this, the rule will be lost when reboot the linux
 sudo iptables-save > /etc/sysconfig/iptables
 
+The following steps are required:
+Step 1. Update the yum packages.
+yum update
+Step 2. Install iptables.
+yum install iptables-services
+Step 3. Enable and start the service.
+systemctl enable iptables
+systemctl start iptables
+
+
+
 
 
 
