@@ -1,6 +1,6 @@
 By default, Let's Encrypt certificates are issued with a validity period of 90 days. 
 To renew the certificate automatically every 60 days, you can use a cron job to run the certbot renew command periodically.
-Here's an example cron job that will run the certbot renew command every day at 3:00am:
+Here's an example cron job that will run the certbot renew command  at 2:00am every month:
 Open the crontab file for the root user:
 
 sudo crontab -e
@@ -8,7 +8,7 @@ sudo crontab -e
 Add the following line to the file:
 
 
-0 3 * * * /usr/bin/certbot renew --quiet --deploy-hook "systemctl reload nginx"
+0 2 1 * * /usr/bin/certbot renew --quiet --deploy-hook "sudo systemctl restart tomcat.service"
 
 
 This command will run the certbot renew command every day at 3:00am, and will reload tomcat after the certificate is renewed.
