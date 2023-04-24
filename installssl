@@ -53,7 +53,12 @@ show all port forwarding:
 sudo iptables -t nat -L -n -v
 sudo /sbin/iptables -t nat -I PREROUTING -p tcp --dport 443 -j REDIRECT --to-port 8443
 delete first rule:
-
 sudo iptables -t nat -D PREROUTING 1
+
+Save the prerouting rule, without this, the rule will be lost when reboot the linux
+sudo iptables-save > /etc/sysconfig/iptables
+
+
+
 
 
