@@ -12,6 +12,9 @@ java -version
 5.If need uninstall
 sudo yum remove java-11-amazon-corretto-headless
 
+6. switch java
+
+sudo alternatives --config java
 
 Reference:
 1. Amazon Linux 2023 Documentation
