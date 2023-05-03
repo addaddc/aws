@@ -1,0 +1,6 @@
+1. login to gmail account
+2.  open google drive
+3. click google docs
+4. click "Tools"=>"Voice Typing"
+5.  microphone setting, refer to the file in the google drive. 
+The file name is convert voice to text.docx
